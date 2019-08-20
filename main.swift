@@ -44,4 +44,8 @@ assertLargestCommonSubsequence(of: "BABA", with: "ABS", is: "AB".prefix(2))
 assertLargestCommonSubsequence(of: "ABS", with: "BABA", is: "AB".prefix(2))
 #warning("Add more test cases ...")
 
+assertLargestCommonSubsequenceDP(of: "BABA", with: "ABS", is: "AB".prefix(2))
+assertLargestCommonSubsequenceDP(of: "ABS", with: "BABA", is: "AB".prefix(2))
+#warning("Add more test cases ...")
+
 print("Success")
