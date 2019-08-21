@@ -40,12 +40,15 @@ assertAllIndicesKMP(of: "xw", in: "abcdefg", is: [])
 assertAllIndicesKMP(of: "xbcdefg", in: "abcdefg", is: [])
 assertAllIndicesKMP(of: "abc", in: "abcxabcabcxabc", is: [0, 4, 7, 11])
 
-assertLargestCommonSubsequence(of: "BABA", with: "ABS", is: "AB".prefix(2))
-assertLargestCommonSubsequence(of: "ABS", with: "BABA", is: "AB".prefix(2))
+assertLargestCommonSubsequence(of: "BABA", with: "ABS", is: "AB")
+assertLargestCommonSubsequence(of: "ABS", with: "BABA", is: "AB")
 #warning("Add more test cases ...")
 
-assertLargestCommonSubsequenceDP(of: "BABA", with: "ABS", is: "AB".prefix(2))
-assertLargestCommonSubsequenceDP(of: "ABS", with: "BABA", is: "AB".prefix(2))
+assertLargestCommonSubsequenceDP(of: "BABA", with: "ABS", is: "AB")
+assertLargestCommonSubsequenceDP(of: "ABS", with: "BABA", is: "AB")
 #warning("Add more test cases ...")
+
+// assertLargestPalindromicSubsequenceDP(of: "forgeeksskeegfor", is: "geeksskeeg")
+assertLargestPalindromicSubsequenceDP(of: "abb", is: "bb")
 
 print("Success")

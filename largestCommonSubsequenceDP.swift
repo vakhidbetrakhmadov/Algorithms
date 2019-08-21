@@ -34,7 +34,9 @@ public extension Collection where Element: Equatable {
     }
 }
 
-func assertLargestCommonSubsequenceDP<C: Collection>(of first: C, with second: C, is result: C.SubSequence?) where C.Element: Equatable { 
+func assertLargestCommonSubsequenceDP<C: Collection>(of first: C, with second: C, is result: C?) where C.Element: Equatable { 
+    let result = result.map { $0.prefix($0.count) }
+    
     let lcs = first.largestCommonSubsequenceDP(with: second)
     // print(lcs as Any)
     let areEqual = (lcs == nil && result == nil) ||
