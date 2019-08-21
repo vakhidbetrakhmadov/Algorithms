@@ -64,10 +64,10 @@ public extension Collection where Element: Equatable {
     }
 }
 
-func assertLargestPalindromicSubsequenceDP<C: Collection>(of first: C, is result: C?) where C.Element: Equatable {
+func assertLargestPalindromicSubsequenceDP<C: Collection>(of collection: C, is result: C?) where C.Element: Equatable {
     let result = result.map { $0.prefix($0.count) }
 
-    let lps = first.largestPalindromicSubsequenceDP()
+    let lps = collection.largestPalindromicSubsequenceDP()
     // print(lps as Any)
     let areEqual = (lps == nil && result == nil) ||
                     lps?.count == result?.count && zip(lps!, result!).reduce(true, { $0 && $1.0 == $1.1 })

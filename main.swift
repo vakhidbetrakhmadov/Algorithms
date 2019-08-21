@@ -48,7 +48,11 @@ assertLargestCommonSubsequenceDP(of: "BABA", with: "ABS", is: "AB")
 assertLargestCommonSubsequenceDP(of: "ABS", with: "BABA", is: "AB")
 #warning("Add more test cases ...")
 
-// assertLargestPalindromicSubsequenceDP(of: "forgeeksskeegfor", is: "geeksskeeg")
+assertLargestPalindromicSubsequenceDP(of: "forgeeksskeegfor", is: "geeksskeeg")
 assertLargestPalindromicSubsequenceDP(of: "abb", is: "bb")
+#warning("Add more test cases ...")
+
+assertLargestPalindromicSubsequence(of: "forgeeksskeegfor", is: "geeksskeeg")
+assertLargestPalindromicSubsequence(of: "abb", is: "bb")
 
 print("Success")
