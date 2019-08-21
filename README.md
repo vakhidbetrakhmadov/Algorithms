@@ -1,2 +1,2 @@
 # Algorithms
-Some common algorithms implemented in swift.
+Some common algorithms implemented in Swift.
