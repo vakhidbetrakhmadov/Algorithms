@@ -1,5 +1,21 @@
 import Foundation
 
+assertFirstIndexBM(of: "", in: "", is: nil)
+assertFirstIndexBM(of: "", in: "ABABDABACDABABCABAB", is: nil)
+assertFirstIndexBM(of: "ABC", in: "", is: nil)
+assertFirstIndexBM(of: "ABS", in: "BABA", is: nil)
+assertFirstIndexBM(of: "ABABCABAB", in: "ABABDABACDABABCABAB", is: 10)
+assertFirstIndexBM(of: "", in: "abcdefg", is: nil)
+assertFirstIndexBM(of: "a", in: "abcdefg", is: 0)
+assertFirstIndexBM(of: "g", in: "abcdefg", is: 6)
+assertFirstIndexBM(of: "ab", in: "abcdefg", is: 0)
+assertFirstIndexBM(of: "fg", in: "abcdefg", is: 5)
+assertFirstIndexBM(of: "cde", in: "abcdefg", is: 2)
+assertFirstIndexBM(of: "abcdefg", in: "abcdefg", is: 0)
+assertFirstIndexBM(of: "x", in: "abcdefg", is: nil)
+assertFirstIndexBM(of: "xw", in: "abcdefg", is: nil)
+assertFirstIndexBM(of: "xbcdefg", in: "abcdefg", is: nil)
+
 assertFirstIndex(of: "", in: "", is: nil)
 assertFirstIndex(of: "", in: "ABABDABACDABABCABAB", is: nil)
 assertFirstIndex(of: "ABC", in: "", is: nil)
