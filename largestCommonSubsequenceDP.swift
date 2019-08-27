@@ -4,9 +4,9 @@ import Foundation
 /// Time: O(n^2)
 /// Space: O(n^2)
 public extension Collection where Element: Equatable {
-    func largestCommonSubsequenceDP(with first: Self) -> SubSequence? {
+    func largestCommonSubsequenceDP(with collection: Self) -> SubSequence? {
         let count = self.count
-        let cCount = first.count
+        let cCount = collection.count
 
         typealias Entry = (startIndex: Index, count: Int)
 
@@ -14,8 +14,8 @@ public extension Collection where Element: Equatable {
         var result: Entry?
 
         for (rowIndex, i) in zip(indices, 0..<count) {
-            for (colIndex, j) in zip(first.indices, 0..<cCount) {
-                if first[colIndex] == self[rowIndex] {
+            for (colIndex, j) in zip(collection.indices, 0..<cCount) {
+                if collection[colIndex] == self[rowIndex] {
                     if i-1 >= 0 && j-1 >= 0 && dpTable[i-1][j-1] != nil { 
                         let entry = dpTable[i-1][j-1]!
                         dpTable[i][j] = (entry.startIndex, entry.count+1)

@@ -1,5 +1,7 @@
 import Foundation
 
+#warning("This algorithm is not correct. Example: \"bbbc\".firstIndex(of: \"bbc\") will return `nil`, while the answer is `1`.")
+
 /// Return the first match of the collection (pattern) in the collection, or nil if no matches are found.
 /// Time: O(N)
 /// Space O(1)

@@ -21,7 +21,8 @@ public extension Collection where Element: Equatable {
     }
 
     private func isPalindrome() -> Bool { 
-        for (i, j) in zip(indices, indices.reversed()) { 
+        for (i, j) in zip(indices, indices.reversed()) {
+            guard i <= j else { break }
             guard self[i] == self[j] else { return false }
         }
         return true
